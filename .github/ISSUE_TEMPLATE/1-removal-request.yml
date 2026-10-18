@@ -1,0 +1,32 @@
+name: 削除・修正のご依頼(権利者・関係者の方)
+description: 名称・表現・内容について、削除や修正をご依頼いただく場合
+title: "[削除・修正のご依頼] "
+labels: ["removal-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご連絡ありがとうございます。内容を確認するまで、該当箇所の公開を停止したうえで対応します。
+        **この Issue は誰でも閲覧できます。** 個人情報は書き込まないでください。非公開でのやり取りが必要な場合は、その旨だけをお書きください。
+  - type: textarea
+    id: target
+    attributes:
+      label: 対象の箇所
+      description: ページや文言、画面の場所などを教えてください
+    validations:
+      required: true
+  - type: textarea
+    id: request
+    attributes:
+      label: ご依頼の内容と理由
+    validations:
+      required: true
+  - type: dropdown
+    id: relation
+    attributes:
+      label: ご関係
+      options:
+        - 権利者ご本人
+        - 権利者の代理人
+        - その他の関係者
+        - 回答しない

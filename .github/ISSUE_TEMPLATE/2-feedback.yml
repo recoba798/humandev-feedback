@@ -1,0 +1,33 @@
+name: ご意見・不具合のご報告
+description: 質問文・結果の表示・使いにくさ・不具合などについて
+title: "[ご意見] "
+labels: ["feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ご意見ありがとうございます。
+        **この Issue は誰でも閲覧できます。** 診断の回答内容・自由記述・結果の共有URL・個人情報は書き込まないでください。
+  - type: dropdown
+    id: kind
+    attributes:
+      label: 種類
+      options:
+        - 質問文・選択肢について
+        - 結果の表示・説明について
+        - 使いにくさ・表示崩れ
+        - 不具合
+        - その他
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: 内容
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: ご利用の環境(任意)
+      description: 例: iPhone / Safari、Windows / Chrome
